@@ -2,6 +2,7 @@ package Person.infrastructure.in;
 
 import java.util.Scanner;
 
+import Menu.MainMenu;
 import Person.application.UpdatePersonUseCase;
 import Person.domain.entity.Person;
 
@@ -38,7 +39,7 @@ public class UpdatePersonView {
             System.out.println("No se pudo encontrar una persona con el ID proporcionado.");
             return;
         }
-        
+
         System.out.println("Deje el campo vacío si no desea cambiar el valor actual.");
 
         System.out.print("Nombre (" + person.getName() + "): ");
@@ -100,6 +101,7 @@ public class UpdatePersonView {
 
         updatePersonUseCase.updatePerson(person);
         System.out.println("Información de la persona actualizada exitosamente!");
+        MainMenu.limpiarPantalla();
     }
 
 }

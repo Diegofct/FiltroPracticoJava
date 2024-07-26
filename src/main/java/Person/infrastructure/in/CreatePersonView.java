@@ -2,6 +2,7 @@ package Person.infrastructure.in;
 
 import java.util.Scanner;
 
+import Menu.MainMenu;
 import Person.application.CreatePersonUseCase;
 import Person.domain.entity.Person;
 
@@ -102,6 +103,7 @@ public class CreatePersonView {
         createPersonUseCase.createPerson(person);
 
         System.out.println("Persona registrada exitosamente!");
+        MainMenu.limpiarPantalla();
     }
 
     

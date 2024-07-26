@@ -2,6 +2,7 @@ package Person.infrastructure.in;
 
 import java.util.Scanner;
 
+import Menu.MainMenu;
 import Person.application.DeletePersonUseCase;
 
 public class DeletePersonView {
@@ -33,5 +34,7 @@ public class DeletePersonView {
 
         deletePersonUseCase.deletePerson(id);
         System.out.println("Persona eliminada exitosamente!");
+        MainMenu.limpiarPantalla();
     }
+    
 }
