@@ -17,4 +17,8 @@ public class UpdatePersonUseCase {
     public boolean existsById(int id) {
         return personService.existById(id);
     }
+
+    public Person getPersonById(int id) {
+        return personService.findById(id);
+    }
 }

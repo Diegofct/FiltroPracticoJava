@@ -8,4 +8,5 @@ public interface PersonService {
     void deletePerson(int id);
     Person readPerson(int id);
     boolean existById(int id);
+    Person findById(int id);
 }
