@@ -43,24 +43,23 @@ public class PersonController {
                 scanner.nextLine();
 
                 switch (option) {
-                    case 1:
+                    case 1 -> {
                         MainMenu.limpiarPantalla();
                         createPersonView.display();
-                        break;
-                    case 2:
+                    }
+                    case 2 -> {
                         MainMenu.limpiarPantalla();
                         updatePersonView.display();
-                        break;
-                    case 3:
+                    }
+                    case 3 -> {
                         MainMenu.limpiarPantalla();
                         deletePersonView.display();
-                        break;
-                    case 4:
+                    }
+                    case 4 -> {
                         MainMenu.limpiarPantalla();
                         return;
-                    default:
-                        System.out.println("Error!, seleccione una opción válida para este menú");
-                        break;
+                    }
+                    default -> System.out.println("Error!, seleccione una opción válida para este menú");
                 }
             } catch (InputMismatchException e) {
                 scanner.nextLine();
